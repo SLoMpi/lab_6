@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <stdexcept>
+
 
 using namespace std;
 
@@ -9,8 +9,8 @@ vector<int>::iterator Find(vector<int>::iterator first, vector<int>::iterator la
         if (*first == el)  return first;
         ++first;
     }
-    throw runtime_error("Эллемент не найден");
-    }
+    return last;
+}
 
 int main() {
     vector<int> v;
@@ -30,6 +30,6 @@ int main() {
     vector<int>::iterator it = Find(v.begin(), v.end(), eFind);
     if (it != v.end()) {
         cout << "Элемент " << eFind << " найден на позиции: " << distance(v.begin(), it) << endl;
-    }
+    } else cout<<"Элемент не найден";
     return 0;
 }
