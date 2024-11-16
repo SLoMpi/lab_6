@@ -25,6 +25,6 @@ int wordsCounter(const string& str) {
 int main() {
     string sentence = "Can you, can you.";
     int count = wordsCounter(sentence);
-    cout << "Количество уникальных слов: " << count << endl; 
+    cout << "Количество слов: " << count << endl; 
     return 0;
 }
