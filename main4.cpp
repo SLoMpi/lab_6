@@ -24,7 +24,7 @@ map<string, int> uniqueWords(const string& str) {
 int main() {
     string str = "can you can";
     map<string, int> words = uniqueWords(str);
-    cout << "Уникальные слова:" << endl;
+    cout << "Уникальные слова: " ;
     for (const auto& pair : words) {
         cout << pair.first << " ";
     }
